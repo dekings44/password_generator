@@ -31,7 +31,10 @@ for char in range(1, numbers + 1):
 
 random.shuffle(password)
 
+if len(password) < 6:
+    print('Password length must not be less than 6. Please try again.')
+else:
+    new_password = ''.join([str(pword) for pword in password])
 
-new_password = ''.join([str(pword) for pword in password])
-
-print(f'Your password is {new_password}')
+    print(f'Your password is {new_password}')
+    
